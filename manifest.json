@@ -1,0 +1,18 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "Tweaks and re-textures",
+        "name": "Vann-illa(ger!)",
+        "uuid": "fcedc315-bcca-48c8-a5d2-8bf759edf49a",
+        "version": [3, 0, 4],
+        "min_engine_version": [ 1, 18, 0 ]
+    },
+    "modules": [
+        {
+            "description": "Vann's Vavorites!1!!",
+            "type": "resources",
+            "uuid": "de3ccfd6-2028-45ea-9d65-43bfa704629e",
+            "version": [1, 8, 2]
+        }
+    ]
+}
