@@ -1,0 +1,72 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:chicken",
+      "min_engine_version": "1.12.0",
+      "materials": {
+        "default": "chicken",
+        "legs": "chicken_legs"
+      },
+      "textures": {
+        "default": "textures/entity/chicken/chicken",
+        "default2": "textures/entity/chicken/amber_chicken",
+        "default3": "textures/entity/chicken/bronzed_chicken",
+        "default4": "textures/entity/chicken/gold_crested_chicken",
+        "default5": "textures/entity/chicken/midnight_chicken",
+        "default6": "textures/entity/chicken/skewbald_chicken",
+        "default7": "textures/entity/chicken/stormy_chicken",
+        "default8": "textures/entity/chicken/chicken",
+        "default9": "textures/entity/chicken/chicken",
+        "default10": "textures/entity/chicken/chicken",
+        "default11": "textures/entity/chicken/chicken",
+        "default12": "textures/entity/chicken/chicken",
+        "default13": "textures/entity/chicken/chicken",
+        "default14": "textures/entity/chicken/chicken",
+        "default15": "textures/entity/chicken/chicken",
+        "default16": "textures/entity/chicken/chicken",
+        "default17": "textures/entity/chicken/chicken",
+        "default18": "textures/entity/chicken/chicken",
+        "default19": "textures/entity/chicken/chicken",
+        "default20": "textures/entity/chicken/chicken",
+        "default21": "textures/entity/chicken/fancy_chicken",
+        "default22": "textures/entity/chicken/fancy_chicken",
+        "default23": "textures/entity/chicken/fancy_chicken"
+      },
+      "geometry": {
+        "default": "geometry.chicken"
+      },
+      "animations": {
+        "move": "animation.chicken.move",
+        "general": "animation.chicken.general",
+        "look_at_target": "animation.common.look_at_target",
+        "baby_transform": "animation.chicken.baby_transform"
+      },
+      "scripts": {
+        "animate": [
+          "general",
+          {
+            "move": "query.modified_move_speed"
+          },
+          "look_at_target",
+          {
+            "baby_transform": "query.is_baby"
+          }
+        ],
+        "scale": "(0.95+0.1*variable.Nvar)",
+        "initialize": [
+          "variable.Nvar = Math.random(-1,1);",
+          "variable.Avar = Math.random(-20,20);",
+          "variable.Xvar = Math.random(0,999);"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.chicken_x"
+      ],
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 0
+      }
+    }
+  }
+}

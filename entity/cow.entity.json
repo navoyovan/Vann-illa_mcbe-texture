@@ -1,0 +1,70 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:cow",
+      "min_engine_version": "1.8.0",
+      "materials": {
+        "default": "cow"
+      },
+      "textures": {
+        "default": "textures/entity/cow/cow",
+        "default2": "textures/entity/cow/albino_cow",
+        "default3": "textures/entity/cow/ashen_cow",
+        "default4": "textures/entity/cow/cookie_cow",
+        "default5": "textures/entity/cow/cream_cow",
+        "default6": "textures/entity/cow/dairy_cow",
+        "default7": "textures/entity/cow/pinto_cow",
+        "default8": "textures/entity/cow/sunset_cow",
+        "default9": "textures/entity/cow/umbra_cow",
+        "default10": "textures/entity/cow/wooly_cow",
+        "default11": "textures/entity/cow/cow",
+        "default12": "textures/entity/cow/cow",
+        "default13": "textures/entity/cow/cow",
+        "default14": "textures/entity/cow/cow",
+        "default15": "textures/entity/cow/cow",
+        "default16": "textures/entity/cow/cow",
+        "default17": "textures/entity/cow/cow",
+        "default18": "textures/entity/cow/cow",
+        "default19": "textures/entity/cow/cow",
+        "default20": "textures/entity/cow/cow",
+        "default21": "textures/entity/cow/cow"
+      },
+      "geometry": {
+        "default": "geometry.cow.v1.8",
+        "default_b": "geometry.cow_b.v1.8"
+      },
+      "animations": {
+        "setup": "animation.cow.setup",
+        "walk": "animation.quadruped.walk",
+        "look_at_target": "animation.common.look_at_target",
+        "baby_transform": "animation.cow.baby_transform"
+      },
+      "scripts": {
+        "animate": [
+          "setup",
+          {
+            "walk": "query.modified_move_speed"
+          },
+          "look_at_target",
+          {
+            "baby_transform": "query.is_baby"
+          }
+        ],
+        "scale": "(0.95+0.1*variable.Nvar)",
+        "initialize": [
+          "variable.Nvar = Math.random(-1,1);",
+          "variable.Avar = Math.random(-20,20);",
+          "variable.Xvar = Math.random(0,999);"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.cow_x"
+      ],
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 1
+      }
+    }
+  }
+}
